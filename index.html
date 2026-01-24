@@ -1,308 +1,809 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <title>CV Mohamed</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
-        
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mohamed Abdelrrahmane Zidoun - Full-Stack Developer & AI Engineer with 6+ years of experience. PhD in AI, 10+ published apps, 2 patents.">
+    <meta name="keywords" content="Full-Stack Developer, AI Engineer, Flutter, Django, Python, Mobile Apps, PhD">
+    <meta name="author" content="Mohamed Abdelrrahmane Zidoun">
+    <title>Mohamed Zidoun | Full-Stack Developer & AI Engineer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e293b',
+                        accent: '#10b981',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-  </head>
+</head>
+<body class="font-['Inter'] bg-slate-50 text-slate-700">
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="60">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-xl font-bold text-primary">MZ<span class="text-accent">.</span></a>
 
-      
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-        <a class="navbar-brand" href="#"></a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-primary transition">About</a>
+                    <a href="#skills" class="nav-link text-slate-600 hover:text-primary transition">Skills</a>
+                    <a href="#experience" class="nav-link text-slate-600 hover:text-primary transition">Experience</a>
+                    <a href="#projects" class="nav-link text-slate-600 hover:text-primary transition">Projects</a>
+                    <a href="#education" class="nav-link text-slate-600 hover:text-primary transition">Education</a>
+                    <a href="#contact" class="nav-link text-slate-600 hover:text-primary transition">Contact</a>
+                    <a href="docs/CV_Mohamed_Zidoun_EN.pdf" class="btn-primary px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-700 transition" download>Download CV</a>
+                </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <i class="fas fa-bars fa-lg"></i>
-        </button>
-        
-        <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
-            <ul class="nav nav-pills navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#about">Me</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#recommandations">Recommendations</a></li>
-            </ul>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="#about" class="block text-slate-600 hover:text-primary">About</a>
+                <a href="#skills" class="block text-slate-600 hover:text-primary">Skills</a>
+                <a href="#experience" class="block text-slate-600 hover:text-primary">Experience</a>
+                <a href="#projects" class="block text-slate-600 hover:text-primary">Projects</a>
+                <a href="#education" class="block text-slate-600 hover:text-primary">Education</a>
+                <a href="#contact" class="block text-slate-600 hover:text-primary">Contact</a>
+                <a href="docs/CV_Mohamed_Zidoun_EN.pdf" class="inline-block px-4 py-2 bg-primary text-white rounded-lg" download>Download CV</a>
+            </div>
         </div>
     </nav>
 
-    <section id="about" class="container-fluid">
-        <div class="col-8 col-lg-4 profile-picture">
-            <img src="images/me.jpg" alt="John" class="rounded-circle">
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-secondary via-slate-800 to-slate-900">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute w-96 h-96 bg-primary/20 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-accent/20 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse"></div>
         </div>
-        <div class="heading">
-                <h1>Hello, it's me Mohamed</h1>
-                <h3>PhD Student - Developer</h3>
-                <a href="docs/cv2.pdf" class="button1">Download CV</a>
-        </div>
-    </section>
 
-          <section id="skills">
-            <div class="red-divider"></div>
-            <div class="heading">
-                <h2>Skills</h2>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-accent font-medium mb-4 tracking-wide" data-aos="fade-down">Hello, I'm</p>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-aos="fade-up">
+                Mohamed <span class="text-primary">Zidoun</span>
+            </h1>
+            <div class="h-12 mb-8" data-aos="fade-up" data-aos-delay="100">
+                <p class="text-xl md:text-2xl text-slate-300">
+                    <span id="typed-text"></span><span class="typing-cursor">|</span>
+                </p>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="progress"> 
-                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                <h5>PHP</h5>
-                            </div>
-                        </div>
-                        <div class="progress"> 
-                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                <h5>PYTHON</h5>
-                            </div>
-                        </div>
-                        <div class="progress"> 
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                <h5>Dart - Flutter</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
-                                <h5>SQL</h5>
-                            </div>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                <h5>GIT - GITHUB</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Full-Stack Developer & AI Engineer with 6+ years of experience.
+                PhD in Artificial Intelligence. Creator of 10+ published applications.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="300">
+                <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-700 transition transform hover:scale-105">
+                    View Projects
+                </a>
+                <a href="#contact" class="px-8 py-3 border-2 border-slate-500 text-white rounded-lg font-medium hover:border-primary hover:text-primary transition">
+                    Contact Me
+                </a>
             </div>
-        </section>
-
-        <section id="experience">
-        
-            <div class="container">
-                <div class="white-divider"></div>
-                <div class="heading">
-                    <h2>Professional Experience</h2>
-                </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
-                        <div class="timeline-panel-container">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Freelancer</h3>
-                                    <h4>Flutter Developer</h4>
-                                    <p class="text-muted"><small class="fas fa-clock"></small> 07/2020 - Now</p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Offering several websites and apps to clients that depends on their needs</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
-                        <div class="timeline-panel-container-inverted">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Algeria's telecommunications</h3>
-                                    <h4>Php Back-End Developer</h4>
-                                    <p class="text-muted"><small class="fas fa-clock"></small> 2019-2020</p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Creation local-hosted websites such us inventory management using Bootstrap and php</p>
-                                    <p>Transforming old apps created with Java to local-hosted websites programmed with Bootstrap</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-badge"><span class="fas fa-briefcase"></span></div>
-                        <div class="timeline-panel-container">
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h3>Mobilis</h3>
-                                    <h4>Web-interface moderator</h4>
-                                    <p class="text-muted"><small class="fas fa-clock"></small> 2018-2019</p>
-                                </div>
-                                <div class="timeline-body">
-                                    <p>Monitoring feedback and responding to customer needs</p>
-                                    <p>Integrations of chatbots into the company's web interfaces</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                
-                </ul>
-            </div>
-            
-        </section>
-    <section id="languages">
-        <div class="red-divider"></div>
-        <div class="heading">
-            <h2>Languages</h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-                            <h5>Arabic</h5>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
-                            <h5>French</h5>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                            <h5>English</h5>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
-                            <h5>Russian</h5>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex justify-center gap-6 mt-12" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://github.com/Zidoun-Abdou" target="_blank" class="text-slate-400 hover:text-white transition text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/abdelrrahmane-zidoun" target="_blank" class="text-slate-400 hover:text-white transition text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:abdelrrahmane.zidoun@gmail.com" class="text-slate-400 hover:text-white transition text-2xl">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </div>
-    </section>
 
-      
-      <section id="education">
-            <div class="container">
-                 <div class="red-divider"></div>
-                <div class="heading">
-                    <h2>Education</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="education-block">
-                            <h5>2014 - 2019</h5>
-                            <span class="fas fa-graduation-cap"></span>
-                            <h3>University of Blida 1 - Algeria</h3>
-                            <h4>Master degree in computer sciences</h4>
-                            <div class="red-divider"></div>
-                            <p>Natural language processing</p>
-                            <p>Information systems and software engineering</p>
-                        </div>
-                    </div>
-                     <div class="col-md-6">
-                         <div class="education-block">
-                            <h5>2020 ... 2024</h5>
-                            <span class="fas fa-graduation-cap"></span>
-                            <h3>RUDN - Moscow</h3>
-                            <h4>Phd student in computer sciences</h4>
-                            <div class="red-divider"></div>
-                            <p>Artificial intelligence</p>
-                            <p>Data science</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        </section>
-        
-      
-        <section id="portfolio">
-            <div class="container">
-                <div class="white-divider"></div>
-                <div class="heading">
-                    <h2>Portfolio</h2>
-                </div>
-                <div class="row py-md-4">
-                    <div class="col-md-6">
-                        <a href="https://github.com/Zidoun-Abdou/GYM-website.git" target="_blank">
-                            <img class="img-thumbnail" src="images/gym.jpg" alt="gympus">
-                        </a>
-                    </div>
-                     <div class="col-md-6">
-                        <a href="https://github.com/Zidoun-Abdou/Burger-shop-website.git" target="_blank">
-                            <img class="img-thumbnail" src="images/burger.jpg" alt="burger">
-                        </a>
-                    </div>
-                </div>
-                 <div class="row">
-                     <div class="col-md-6">
-                         <a href="https://github.com/Zidoun-Abdou/Mini-market-website.git" target="_blank">
-                             <img class="img-thumbnail" src="images/market.jpg" alt="market">
-                         </a>
-                     </div>
-                     <div class="col-md-6">
-                         <a href="https://github.com/Zidoun-Abdou/NLP-Arabic-platforme.git" target="_blank">
-                             <img class="img-thumbnail" src="images/nlpa.jpg" alt="nlpa">
-                         </a>
-                     </div>
-                </div>
-
-            </div>
-            
-        </section>
-      
-      
-       <section id="recommandations">
-            <div class="container">
-                <div class="red-divider"></div>
-                <div class="heading">
-                    <h2>Recommandations</h2>
-                </div>
-                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                         <li data-target="#myCarousel" data-slide-to="1"></li>
-                         <li data-target="#myCarousel" data-slide-to="2"></li>  
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <h3>"Such an active student and a hard worker, Keep up the good work"</h3>
-                            <h4>Benblidia Nadjia, Head of IT Department at USDB Blida</h4>
-                        </div>
-                          <div class="carousel-item">
-                            <h3>"I am proud to supervise you on Your Phd, Good luck"</h3>
-                            <h4>Ykhlef Hadjer, Analytic and doctor in artificial intelligence</h4>
-                        </div>
-                          <div class="carousel-item">
-                            <h3>"You have helped our center a lot because of your project... Thank you!"</h3>
-                            <h4>Houcini Hatem, Head of IT at CDTA Algiers</h4>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" role="button">
-                        <span class="fas fa-chevron-left fa-2x"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" data-slide="next" role="button">
-                        <span class="fas fa-chevron-right fa-2x"></span>
-                    </a>
-                
-                </div>
-            
-            </div>
-        
-        
-        </section>
-
-    
-        <footer class="text-center">
-            <a href="#about">
-                <span class="fas fa-chevron-up"></span>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-slate-400 hover:text-white transition">
+                <i class="fas fa-chevron-down text-2xl"></i>
             </a>
-            <h5>© Zidoun Mohamed A </h5>
-        </footer>
-      
-  </body>
-    
-</html> 
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="w-72 h-72 md:w-96 md:h-96 mx-auto relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl transform rotate-6"></div>
+                        <img src="images/me.jpg" alt="Mohamed Zidoun" class="relative w-full h-full object-cover rounded-2xl shadow-xl">
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Full-Stack Developer & AI Researcher</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        I'm a passionate developer with a PhD in Artificial Intelligence and Autonomous Systems from RUDN University, Moscow.
+                        With over 6 years of experience, I specialize in building enterprise-grade mobile and web applications using Flutter, Django, and Python.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Co-founder of <strong>DataMindX</strong> and <strong>Smart Field Solutions</strong>, I've delivered solutions for major clients including
+                        Mobilis, Algerie Telecom, and government ministries. My work spans AI, IoT, NFC technology, and precision agriculture.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-slate-50 rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="text-3xl font-bold text-primary">6+</div>
+                            <div class="text-sm text-slate-500">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="text-3xl font-bold text-primary">20+</div>
+                            <div class="text-sm text-slate-500">Projects</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="text-3xl font-bold text-primary">10+</div>
+                            <div class="text-sm text-slate-500">Apps Published</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="text-3xl font-bold text-primary">2</div>
+                            <div class="text-sm text-slate-500">Patents</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Languages -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Dart</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">PHP</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">TypeScript</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-layer-group text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Flutter</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">FastAPI</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Laravel</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">TensorFlow</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Computer Vision</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">NLP</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">OCR</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Face Recognition</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-database text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">MySQL</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">SQLite</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Firebase</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Redis</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-server text-cyan-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">DevOps & Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Linux</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">CI/CD</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-mobile-alt text-pink-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-4">Mobile Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">iOS</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Android</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Cross-Platform</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">App Store</span>
+                        <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm">Play Store</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Experience</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-slate-200"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Smart Field Solutions -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <span class="text-sm text-accent font-medium">Feb 2025 - Present</span>
+                                <h3 class="text-xl font-bold text-secondary mt-2">Co-Founder & Managing Director</h3>
+                                <p class="text-primary font-medium">Smart Field Solutions</p>
+                                <p class="text-slate-600 mt-3 text-sm">Founded AgriTech startup for precision agriculture using IoT and AI. Developed smart farming platform with satellite imagery and sensor integration.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <!-- DataMindX -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <span class="text-sm text-accent font-medium">Mar 2023 - Present</span>
+                                <h3 class="text-xl font-bold text-secondary mt-2">R&D Consultant</h3>
+                                <p class="text-primary font-medium">DataMindX</p>
+                                <p class="text-slate-600 mt-3 text-sm">Co-founded tech consulting firm. Delivered 8+ applications for clients including government ministries. Designed AI models for OCR and biometric verification.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobilis -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <span class="text-sm text-accent font-medium">Aug 2024 - Aug 2025</span>
+                                <h3 class="text-xl font-bold text-secondary mt-2">Front-End & Mobile Consultant</h3>
+                                <p class="text-primary font-medium">Mobilis</p>
+                                <p class="text-slate-600 mt-3 text-sm">Built POS Manager and LinkMaster applications. Implemented NFC-based ID scanning reducing customer onboarding time by 60%.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-300 rounded-full border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+
+                    <!-- RUDN -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-300 rounded-full border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <span class="text-sm text-accent font-medium">Jun 2023 - Jun 2025</span>
+                                <h3 class="text-xl font-bold text-secondary mt-2">R&D Team Lead</h3>
+                                <p class="text-primary font-medium">RUDN University, Moscow</p>
+                                <p class="text-slate-600 mt-3 text-sm">Directed research in autonomous systems and robotics. Contributed to 2 patents and multiple SCOPUS publications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Icosnet -->
+                    <div class="relative flex flex-col md:flex-row items-center" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+                                <span class="text-sm text-accent font-medium">Jul 2022 - Dec 2024</span>
+                                <h3 class="text-xl font-bold text-secondary mt-2">Mobile Developer to Head of SI Dept</h3>
+                                <p class="text-primary font-medium">Icosnet</p>
+                                <p class="text-slate-600 mt-3 text-sm">Developed 5+ Flutter apps including Whowiaty biometric ID verification. Promoted to lead IT systems and development team.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-300 rounded-full border-4 border-white"></div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Projects</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition" data-filter="all">All</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition" data-filter="web">Web</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition" data-filter="ai">AI/ML</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition" data-filter="iot">IoT</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Cortixia Chat -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile ai" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-primary to-blue-700 flex items-center justify-center">
+                        <i class="fas fa-comments text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">AI</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Featured</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Cortixia Chat</h3>
+                        <p class="text-slate-600 text-sm mb-4">End-to-end encrypted messaging platform with AI-powered real-time translation supporting 20 languages.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">Matrix Protocol</span>
+                            <span class="text-xs text-slate-500">FastAPI</span>
+                            <span class="text-xs text-slate-500">WebRTC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Djezzy POS -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-accent to-emerald-700 flex items-center justify-center">
+                        <i class="fas fa-cash-register text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Web</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Featured</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Djezzy POS</h3>
+                        <p class="text-slate-600 text-sm mb-4">Enterprise Point of Sale system for telecom with NFC ID card scanning and automated PDF contract generation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Django</span>
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">NFC</span>
+                            <span class="text-xs text-slate-500">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Whowiaty -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile ai" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center">
+                        <i class="fas fa-id-card text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Whowiaty</h3>
+                        <p class="text-slate-600 text-sm mb-4">Biometric ID verification app with proprietary NFC chip decryption algorithm for Algerian ID cards.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">Python</span>
+                            <span class="text-xs text-slate-500">NFC</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.icosnet.whowiyati" target="_blank" class="text-primary font-medium text-sm hover:underline">
+                            Play Store <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Smart Field -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="web iot ai" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center">
+                        <i class="fas fa-seedling text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Web</span>
+                            <span class="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded">IoT</span>
+                            <span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Featured</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Smart Field App</h3>
+                        <p class="text-slate-600 text-sm mb-4">AgriTech platform with satellite imagery analysis (NDVI), IoT sensor integration, and crop tracking.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Django</span>
+                            <span class="text-xs text-slate-500">PostgreSQL</span>
+                            <span class="text-xs text-slate-500">IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffre Intelligent -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile iot ai" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center">
+                        <i class="fas fa-lock text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded">IoT</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Coffre Intelligent</h3>
+                        <p class="text-slate-600 text-sm mb-4">Smart safe system for Algerie Telecom with AI (OCR, face-matching) and IoT hardware integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">Python</span>
+                            <span class="text-xs text-slate-500">ESP32</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farmers Marketplace -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-amber-600 to-amber-800 flex items-center justify-center">
+                        <i class="fas fa-tractor text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Web</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Farmers Marketplace</h3>
+                        <p class="text-slate-600 text-sm mb-4">Mobile marketplace connecting Algerian farmers with wholesale traders.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Django REST</span>
+                            <span class="text-xs text-slate-500">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ZAKAT Platform -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="web ai" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center">
+                        <i class="fas fa-hand-holding-heart text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded">Web</span>
+                            <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded">AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">ZAKAT Platform</h3>
+                        <p class="text-slate-600 text-sm mb-4">Islamic charity management with OCR-based document processing and workflow automation.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Django</span>
+                            <span class="text-xs text-slate-500">Tailwind CSS</span>
+                            <span class="text-xs text-slate-500">OCR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AT Meet -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
+                        <i class="fas fa-video text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">AT Meet / V-Room</h3>
+                        <p class="text-slate-600 text-sm mb-4">Enterprise video conferencing apps for Algerie Telecom and Icosnet.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">Jitsi</span>
+                            <span class="text-xs text-slate-500">WebRTC</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.icosnet.vroom" target="_blank" class="text-primary font-medium text-sm hover:underline">
+                            Play Store <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GPS Bike Tracker -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile iot" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-orange-600 to-orange-800 flex items-center justify-center">
+                        <i class="fas fa-motorcycle text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                            <span class="px-2 py-1 bg-cyan-100 text-cyan-700 text-xs rounded">IoT</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">GPS Bike Tracker</h3>
+                        <p class="text-slate-600 text-sm mb-4">Real-time GPS tracking application with theft alert notifications.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">GPS</span>
+                            <span class="text-xs text-slate-500">IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Projects -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile" data-aos="fade-up">
+                    <div class="h-48 bg-gradient-to-br from-indigo-600 to-indigo-800 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">My Mobilis</h3>
+                        <p class="text-slate-600 text-sm mb-4">Customer self-care application for Mobilis subscribers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-violet-600 to-violet-800 flex items-center justify-center">
+                        <i class="fas fa-user-cog text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">SelfCare Icosnet</h3>
+                        <p class="text-slate-600 text-sm mb-4">Customer self-service application for Icosnet ISP clients.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">PHP</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.icosnet.selfcare" target="_blank" class="text-primary font-medium text-sm hover:underline">
+                            Play Store <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition group" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-university text-white text-5xl opacity-50 group-hover:scale-110 transition"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">Mobile</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">USDB University App</h3>
+                        <p class="text-slate-600 text-sm mb-4">Custom application for University of Blida 1.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs text-slate-500">Flutter</span>
+                            <span class="text-xs text-slate-500">REST API</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.datamindx.usdb" target="_blank" class="text-primary font-medium text-sm hover:underline">
+                            Play Store <i class="fas fa-external-link-alt ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Education</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-xl" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-primary text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-accent font-medium">2020 - 2025</span>
+                    <h3 class="text-xl font-bold text-secondary mt-2">PhD in AI & Autonomous Systems</h3>
+                    <p class="text-primary font-medium">RUDN University, Moscow</p>
+                    <p class="text-slate-600 mt-3 text-sm">Policy optimization algorithms using reinforcement learning and computer vision.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-book text-accent text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-accent font-medium">2017 - 2019</span>
+                    <h3 class="text-xl font-bold text-secondary mt-2">Master's in NLP</h3>
+                    <p class="text-primary font-medium">University of Blida 1</p>
+                    <p class="text-slate-600 mt-3 text-sm">Natural Language Processing. Contributed to open-source NLP tools for Arabic.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-purple-600 text-2xl"></i>
+                    </div>
+                    <span class="text-sm text-accent font-medium">2014 - 2017</span>
+                    <h3 class="text-xl font-bold text-secondary mt-2">BSc in Software Engineering</h3>
+                    <p class="text-primary font-medium">University of Blida 1</p>
+                    <p class="text-slate-600 mt-3 text-sm">Information Systems and Software Engineering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Publications & Patents</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-xl font-bold text-secondary mb-6 flex items-center">
+                        <i class="fas fa-certificate text-primary mr-3"></i> Patents
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h4 class="font-semibold text-secondary">Neuronix SD</h4>
+                            <p class="text-slate-600 text-sm">Diabetes Prediction Program</p>
+                            <p class="text-xs text-slate-400 mt-2">Patent No. 2022684789</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h4 class="font-semibold text-secondary">Neuronyx PRO</h4>
+                            <p class="text-slate-600 text-sm">Diabetes Mellitus Prediction Program</p>
+                            <p class="text-xs text-slate-400 mt-2">Patent No. 2023617080</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h3 class="text-xl font-bold text-secondary mb-6 flex items-center">
+                        <i class="fas fa-file-alt text-primary mr-3"></i> Selected Publications (SCOPUS)
+                    </h3>
+                    <div class="space-y-4">
+                        <a href="https://www.researchgate.net/publication/367031765" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h4 class="font-semibold text-secondary hover:text-primary transition">Comparative Analysis of ML Methods for Heart Disease Prediction</h4>
+                            <p class="text-xs text-slate-400 mt-2">ResearchGate <i class="fas fa-external-link-alt ml-1"></i></p>
+                        </a>
+                        <a href="https://www.researchgate.net/publication/380264957" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h4 class="font-semibold text-secondary hover:text-primary transition">Unsupervised ML Control Techniques for Control System Problems</h4>
+                            <p class="text-xs text-slate-400 mt-2">ResearchGate <i class="fas fa-external-link-alt ml-1"></i></p>
+                        </a>
+                        <a href="https://www.researchgate.net/publication/378660362" target="_blank" class="block bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                            <h4 class="font-semibold text-secondary hover:text-primary transition">Mobile Robotics: Applications of AI and Machine Learning</h4>
+                            <p class="text-xs text-slate-400 mt-2">ResearchGate <i class="fas fa-external-link-alt ml-1"></i></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    I'm always open to new opportunities, collaborations, or just a friendly chat about tech.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <a href="mailto:abdelrrahmane.zidoun@gmail.com" class="bg-slate-800 p-8 rounded-xl text-center hover:bg-slate-700 transition group" data-aos="fade-up">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition">
+                        <i class="fas fa-envelope text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Email</h3>
+                    <p class="text-slate-400 text-sm break-all">abdelrrahmane.zidoun@gmail.com</p>
+                </a>
+
+                <a href="https://linkedin.com/in/abdelrrahmane-zidoun" target="_blank" class="bg-slate-800 p-8 rounded-xl text-center hover:bg-slate-700 transition group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition">
+                        <i class="fab fa-linkedin text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-slate-400 text-sm">Connect with me</p>
+                </a>
+
+                <a href="https://github.com/Zidoun-Abdou" target="_blank" class="bg-slate-800 p-8 rounded-xl text-center hover:bg-slate-700 transition group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition">
+                        <i class="fab fa-github text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">GitHub</h3>
+                    <p class="text-slate-400 text-sm">Check my repos</p>
+                </a>
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+                <a href="docs/CV_Mohamed_Zidoun_EN.pdf" class="inline-flex items-center px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-blue-700 transition transform hover:scale-105" download>
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-500 text-sm">&copy; 2025 Mohamed Zidoun. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="https://github.com/Zidoun-Abdou" target="_blank" class="text-slate-500 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abdelrrahmane-zidoun" target="_blank" class="text-slate-500 hover:text-white transition">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:abdelrrahmane.zidoun@gmail.com" class="text-slate-500 hover:text-white transition">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
