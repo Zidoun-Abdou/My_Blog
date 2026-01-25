@@ -28,11 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const typedTextElement = document.getElementById('typed-text');
     if (typedTextElement) {
         const texts = [
-            'Full-Stack Developer',
-            'AI Engineer',
-            'PhD in Artificial Intelligence',
-            'Mobile App Developer',
-            'Co-Founder & Entrepreneur'
+            'Développeur Full-Stack',
+            'Ingénieur IA',
+            'Doctorat en Intelligence Artificielle',
+            'Développeur d\'Applications Mobiles',
+            'Co-Fondateur & Entrepreneur'
         ];
         let textIndex = 0;
         let charIndex = 0;
