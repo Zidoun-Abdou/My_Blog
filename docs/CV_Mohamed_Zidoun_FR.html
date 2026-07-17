@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Abdelrrahmane Zidoun - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 15mm;
+            background: white;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                font-size: 9pt;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        h1 {
+            font-size: 22pt;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 11pt;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 9pt;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 11pt;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #bdc3c7;
+        }
+
+        h3 {
+            font-size: 10pt;
+            color: #34495e;
+            margin-bottom: 2px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            font-weight: normal;
+            color: #555;
+            font-size: 9pt;
+        }
+
+        .date {
+            font-size: 8pt;
+            color: #7f8c8d;
+            white-space: nowrap;
+        }
+
+        .location {
+            font-size: 8pt;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 3px solid #3498db;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 3px 10px;
+            font-size: 9pt;
+        }
+
+        .skill-category {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .project {
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .tech-stack {
+            font-size: 8pt;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .education-item {
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .school {
+            color: #555;
+        }
+
+        .patent, .publication {
+            margin-bottom: 5px;
+            font-size: 9pt;
+        }
+
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .lang-item {
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 3px;
+        }
+
+        .lang-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .lang-level {
+            font-size: 8pt;
+            color: #7f8c8d;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .section {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="flex: 1;">
+                <h1>MOHAMED ABDELRRAHMANE ZIDOUN</h1>
+                <div class="subtitle">Développeur Full-Stack &amp; Docteur en Intelligence Artificielle</div>
+                <div class="contact-info">
+                    Blida, Algérie | +213 770 35 92 85 | abdelrrahmane.zidoun@gmail.com
+                </div>
+            </div>
+            <div style="text-align: center; margin-left: 15px;">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&amp;data=https://zidoun-abdou.github.io/My_Blog/" alt="QR Code Portfolio" width="70" height="70" style="border: 1px solid #ddd;">
+                <div style="font-size: 7pt; color: #7f8c8d; margin-top: 2px;">Scannez pour plus de détails</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2>Résumé Professionnel</h2>
+        <div class="summary">
+            Développeur Full-Stack et Docteur en Intelligence Artificielle spécialisé dans la conception d'applications web et mobiles de niveau entreprise. Titulaire d'un doctorat en Intelligence Artificielle et Systèmes Autonomes avec expertise en vision par ordinateur, apprentissage par renforcement et traitement automatique du langage naturel. Livraison réussie de plusieurs applications en production sur Play Store et App Store pour des clients majeurs incluant Mobilis, Algérie Télécom et des ministères gouvernementaux. Co-fondateur de deux startups technologiques spécialisées en IA, IoT et solutions d'agriculture de précision. Détenteur de 2 brevets d'invention et auteur de publications scientifiques.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Formation</h2>
+
+        <div class="education-item">
+            <div class="job-header">
+                <span class="degree">Doctorat en Intelligence Artificielle et Systèmes Autonomes</span>
+                <span class="date">Sept 2020 - Juin 2025</span>
+            </div>
+            <div class="school">Université RUDN | Moscou, Russie — diplôme délivré en 2026</div>
+            <div style="font-size: 9pt; color: #555;">Recherche : Algorithmes d'optimisation de politiques pour systèmes autonomes utilisant l'apprentissage par renforcement et la vision par ordinateur</div>
+        </div>
+
+        <div class="education-item">
+            <div class="job-header">
+                <span class="degree">Master en Traitement Automatique du Langage Naturel</span>
+                <span class="date">Sept 2017 - Juil 2019</span>
+            </div>
+            <div class="school">Université de Blida 1 | Blida, Algérie</div>
+        </div>
+
+        <div class="education-item">
+            <div class="job-header">
+                <span class="degree">Licence en Ingénierie des Systèmes d'Information et de Logiciels</span>
+                <span class="date">Sept 2014 - Juil 2017</span>
+            </div>
+            <div class="school">Université de Blida 1 | Blida, Algérie</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Compétences Techniques</h2>
+        <div class="skills-grid">
+            <span class="skill-category">Langages :</span>
+            <span>Python, Dart, PHP, JavaScript, TypeScript, HTML5, CSS3, SQL</span>
+
+            <span class="skill-category">Mobile :</span>
+            <span>Flutter (iOS/Android), Développement multiplateforme, Déploiement App Store &amp; Play Store</span>
+
+            <span class="skill-category">Backend :</span>
+            <span>Django, FastAPI, Laravel, Node.js, Conception d'API REST</span>
+
+            <span class="skill-category">IA/ML :</span>
+            <span>TensorFlow, Vision par ordinateur, NLP, Apprentissage par renforcement, OCR, Reconnaissance faciale</span>
+
+            <span class="skill-category">Bases de données :</span>
+            <span>PostgreSQL, MySQL, SQLite, Firebase</span>
+
+            <span class="skill-category">DevOps :</span>
+            <span>Git, Docker, Serveurs Linux, CI/CD, Déploiement cloud</span>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Expérience Professionnelle</h2>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Co-Fondateur &amp; Gérant</h3>
+                <span class="date">Fév 2025 - Présent</span>
+            </div>
+            <div class="company">Smart Field Solutions | Birtouta, Algérie</div>
+            <ul>
+                <li>Fondation d'une startup AgriTech axée sur l'agriculture de précision utilisant l'IoT et l'IA</li>
+                <li>Développement d'une plateforme agricole intelligente intégrant l'imagerie satellite (NDVI) et capteurs IoT</li>
+                <li>Direction des initiatives R&amp;D pour le suivi des cultures et l'optimisation de l'irrigation</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Consultant en Recherche &amp; Développement</h3>
+                <span class="date">Mars 2023 - Présent</span>
+            </div>
+            <div class="company">DataMindX | Blida, Algérie</div>
+            <ul>
+                <li>Co-fondation d'une société de conseil technologique spécialisée en IA, IoT et développement sur mesure</li>
+                <li>Livraison de plus de 8 applications mobiles pour divers clients incluant des ministères gouvernementaux</li>
+                <li>Conception et implémentation de modèles d'IA pour l'OCR et la vérification biométrique</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Consultant en Développement Front-End &amp; Mobile</h3>
+                <span class="date">Août 2024 - Août 2025</span>
+            </div>
+            <div class="company">Mobilis | Bab Ezzouar, Algérie</div>
+            <ul>
+                <li>Développement et optimisation des interfaces web et mobiles pour le principal opérateur télécom d'Algérie</li>
+                <li>Création de l'application POS Manager gérant la création de contrats, signatures numériques et génération PDF</li>
+                <li>Implémentation de la lecture NFC des cartes d'identité, réduisant le temps d'intégration client de 60%</li>
+                <li>Développement de la plateforme LinkMaster pour la gestion des distributeurs avec calcul automatisé des commissions</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Responsable d'Équipe R&amp;D</h3>
+                <span class="date">Juin 2023 - Juin 2025</span>
+            </div>
+            <div class="company">Université RUDN | Moscou, Russie</div>
+            <ul>
+                <li>Direction de projets de recherche en systèmes autonomes, robotique et apprentissage automatique</li>
+                <li>Supervision d'équipes multidisciplinaires ; contribution à 2 brevets et plusieurs publications</li>
+                <li>Développement d'algorithmes pour la navigation de robots en temps réel par données visuelles</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Chef de Département Applicatifs SI &amp; Données</h3>
+                <span class="date">Déc 2023 - Déc 2024</span>
+            </div>
+            <div class="company">Icosnet | Cheraga, Algérie</div>
+            <ul>
+                <li>Gestion des systèmes informatiques, de la sécurité des données et du développement applicatif</li>
+                <li>Supervision de l'équipe de développement et déploiement d'applications clients</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Développeur d'Applications Mobiles</h3>
+                <span class="date">Juil 2022 - Nov 2023</span>
+            </div>
+            <div class="company">Icosnet | Cheraga, Algérie</div>
+            <ul>
+                <li>Développement de plus de 5 applications Flutter pour les plateformes iOS et Android</li>
+                <li>Création de Whowiaty : application de vérification d'identité biométrique avec décryptage NFC</li>
+                <li>Développement de la plateforme de visioconférence V-Room avec communication en temps réel</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <h3>Développeur Full-Stack</h3>
+                <span class="date">Juil 2020 - Avr 2022</span>
+            </div>
+            <div class="company">WakeApp | Moscou, Russie (Télétravail)</div>
+            <ul>
+                <li>Développement d'applications mobiles et web pour des clients internationaux en PHP et Flutter</li>
+                <li>Gestion du cycle de vie complet des projets, de la collecte des besoins à la production</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="page-break"></div>
+
+    <section class="section">
+        <h2>Projets Clés</h2>
+
+        <div class="project">
+            <span class="project-title">Visio - Plateforme de Visioconférence Auto-Hébergée</span>
+            <span class="tech-stack"> | Django, Next.js, Flutter, LiveKit, IA</span>
+            <ul>
+                <li>Plateforme de visioconférence de classe Zoom (Web, Android, iOS) sur SFU LiveKit auto-hébergé</li>
+                <li>Transcription et résumés de réunion par IA entièrement auto-hébergés (Whisper + LLM local)</li>
+                <li>En production sur visio.datamindxdz.com</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Suite eKYC en Marque Blanche - BEA, Bank ABC, Algérie Poste, CAAR</span>
+            <span class="tech-stack"> | Flutter, Django, NFC, IA</span>
+            <ul>
+                <li>Industrialisation d'un pipeline de vérification d'identité : OCR MRZ, lecture NFC des puces biométriques (ICAO 9303), détection de vivacité et face match</li>
+                <li>Déploiement en applications de marque pour deux banques, la poste nationale et une grande compagnie d'assurance</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Beep - Messagerie Chiffrée</span>
+            <span class="tech-stack"> | Flutter, Matrix, LiveKit, FastAPI</span>
+            <ul>
+                <li>Messagerie chiffrée de bout en bout sur Matrix avec appels audio/vidéo LiveKit et inscription par OTP e-mail</li>
+                <li>Backend FastAPI dédié (identité, jetons d'appel, notifications push) ; serveur en production</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">DZ Biometry - Lecteur de Documents Biométriques Hors-Ligne</span>
+            <span class="tech-stack"> | Flutter, NFC, ML Kit</span>
+            <ul>
+                <li>Lecture 100% hors-ligne des documents biométriques algériens (CNI, passeport, permis) via NFC — ICAO 9303 / ISO 18013</li>
+                <li>OCR MRZ embarqué, interface trilingue AR/FR/EN, aucune donnée ne quitte le téléphone</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Cortixia Chat - Plateforme de Messagerie Sécurisée</span>
+            <span class="tech-stack"> | Flutter, Protocole Matrix, FastAPI, WebRTC</span>
+            <ul>
+                <li>Architecture d'une application de messagerie chiffrée de bout en bout avec traduction IA temps réel (20 langues)</li>
+                <li>Intégration de WebRTC pour les appels vidéo/audio et la transcription vocale</li>
+                <li>Déploiement multiplateforme (Android, iOS, Web, Desktop) avec backend Matrix personnalisé</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Djezzy POS - Système de Point de Vente Entreprise</span>
+            <span class="tech-stack"> | Django, Flutter, Chart.js</span>
+            <ul>
+                <li>Construction d'une solution POS complète pour un opérateur télécom majeur gérant contrats et inventaire</li>
+                <li>Développement de la lecture NFC des cartes d'identité extrayant les données des puces biométriques</li>
+                <li>Implémentation de la capture de signature numérique et génération automatisée de contrats PDF bilingues</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Whowiaty - Vérification d'Identité Biométrique</span>
+            <span class="tech-stack"> | Flutter, Python, NFC</span>
+            <ul>
+                <li>Développement d'un algorithme propriétaire pour décrypter les puces NFC des cartes d'identité algériennes</li>
+                <li>Intégration de modèles d'IA pour la reconnaissance faciale et la vérification d'authenticité</li>
+                <li>Publication sur Play Store et App Store pour la vérification d'identité en entreprise</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Coffre Intelligent - Système de Coffre-Fort Intelligent</span>
+            <span class="tech-stack"> | Flutter, Python, ESP32, IA</span>
+            <ul>
+                <li>Conception d'une solution de coffre-fort intelligent IoT pour Algérie Télécom avec OCR et reconnaissance faciale</li>
+                <li>Construction de l'intégration matérielle avec ESP32, caméras et scanners pour vérification biométrique</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Smart Field App - Plateforme AgriTech</span>
+            <span class="tech-stack"> | Django, PostgreSQL, IoT</span>
+            <ul>
+                <li>Création d'une plateforme d'agriculture de précision avec analyse d'imagerie satellite (NDVI) et capteurs IoT</li>
+                <li>Développement du suivi des cultures, de la gestion de l'irrigation et de l'optimisation des rendements</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Farmers Marketplace - Plateforme de Commerce Agricole</span>
+            <span class="tech-stack"> | Django REST API, Flutter</span>
+            <ul>
+                <li>Construction d'une place de marché mobile connectant les agriculteurs algériens aux grossistes</li>
+                <li>Implémentation du filtrage par localisation, de l'authentification OTP et du suivi des intérêts</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Plateforme ZAKAT - Système de Gestion de Charité</span>
+            <span class="tech-stack"> | Django, Tailwind CSS, OCR</span>
+            <ul>
+                <li>Développement d'une plateforme de gestion de la Zakat avec traitement OCR des documents</li>
+                <li>Création d'une interface arabe RTL avec automatisation du workflow multi-étapes</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Solutions de Visioconférence (AT Meet, V-Room)</span>
+            <span class="tech-stack"> | Flutter, Jitsi, WebRTC</span>
+            <ul>
+                <li>Développement d'applications de visioconférence entreprise pour Algérie Télécom et Icosnet</li>
+                <li>Implémentation de l'authentification OTP, de l'accès invité et du support multilingue</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">LinkMaster - Gestion des Distributeurs</span>
+            <span class="tech-stack"> | Flutter, Django, Vue.js</span>
+            <ul>
+                <li>Plateforme de gestion des distributeurs pour Mobilis avec calcul automatisé des commissions</li>
+                <li>Architecture modulaire pour les commandes, produits et objectifs commerciaux</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Applications Self-Care (My Mobilis, SelfCare Icosnet)</span>
+            <span class="tech-stack"> | Flutter, PHP, REST API</span>
+            <ul>
+                <li>Applications de libre-service client pour les abonnés Mobilis et Icosnet</li>
+                <li>Publication sur Play Store et App Store avec gestion complète des comptes</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">MHUV - Application Ministère de l'Habitat</span>
+            <span class="tech-stack"> | Flutter, PHP</span>
+            <ul>
+                <li>Application mobile sur mesure pour le Ministère de l'Habitat, de l'Urbanisme et de la Ville</li>
+                <li>Développement complet de l'UI/UX au déploiement sur les stores</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Autres Applications Publiées</span>
+            <span class="tech-stack"> | Flutter, PHP, Python</span>
+            <ul>
+                <li>Ch7al Jebt? (شحال جبت؟) : Calculateur hors-ligne des moyennes BEM &amp; BAC avec guide d'orientation universitaire — Play Store &amp; App Store</li>
+                <li>Bac Quiz DZ : Préparation au BAC hors-ligne par répétition espacée (système Leitner) couvrant 9 filières</li>
+                <li>Wach Ntiyeblak : Application ludique de suggestion de plats algériens</li>
+                <li>Chhal Prix : Application de comparaison de prix pour supermarchés</li>
+                <li>USDB : Application sur mesure pour l'Université de Blida 1</li>
+                <li>Ibox : Solution de stockage de données mobiles pour Icosnet</li>
+                <li>Frihali Fi Alger : Application de services locaux pour startup</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Applications Bancaires &amp; Finance</span>
+            <span class="tech-stack"> | Flutter, IA, OCR</span>
+            <ul>
+                <li>Al Salam Bank KYC : Vérification d'identité bancaire avec traitement de documents par IA</li>
+                <li>Wallet : Application de portefeuille numérique pour paiements et transactions</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Visioconférence &amp; Communication</span>
+            <span class="tech-stack"> | Flutter, Jitsi, WebRTC</span>
+            <ul>
+                <li>TT Meets, UniMeet, Mobilis Meetings : Solutions de visioconférence d'entreprise</li>
+                <li>Multiples clients incluant universités et opérateurs télécom</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Applications Grand Public &amp; Business</span>
+            <span class="tech-stack"> | Flutter, REST API</span>
+            <ul>
+                <li>Applications restaurant (Resto2, Client) : Gestion de commandes et solutions client</li>
+                <li>Delivery App : Suivi de livraison en temps réel avec notifications</li>
+                <li>Kitchen App : Gestion de recettes et planification de repas</li>
+                <li>Camp Tiziri : Application mobile de clinique de fertilité pour gestion des patients</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Plateformes Web Universitaires &amp; Secteur Public</span>
+            <span class="tech-stack"> | Django, Tailwind CSS</span>
+            <ul>
+                <li>ELN-203 : Portail de réclamations étudiantes de l'Université Blida 1 — en production (reclamations-usdb.datamindxdz.com)</li>
+                <li>Damancom 2.0 : Refonte concept du portail CASNOS avec simulateur de cotisations, attestations PDF et chatbot IA</li>
+                <li>GDNC Services : Plateforme multilingue « étudier en Russie » (web + application mobile)</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <span class="project-title">Outils Utilitaires &amp; Spécialisés</span>
+            <span class="tech-stack"> | Flutter, NFC, Code-barres</span>
+            <ul>
+                <li>NFC Reader : Utilitaire de lecture de cartes NFC</li>
+                <li>Tazdam : Scan de codes-barres/QR pour gestion d'inventaire</li>
+                <li>Operations : Système de suivi de workflow et reporting</li>
+                <li>HITS : Lecteur audio avec gestion de playlists</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Brevets &amp; Publications</h2>
+        <div class="two-column">
+            <div>
+                <strong>Brevets d'Invention (2)</strong>
+                <div class="patent">Neuronix SD - Programme de Prévision du Diabète (N° 2022684789)</div>
+                <div class="patent">Neuronyx PRO - Prévision du Diabète Sucré (N° 2023617080)</div>
+            </div>
+            <div>
+                <strong>Publications (6 Total : 4 SCOPUS + 2 VAK)</strong>
+                <div class="publication">- Méthodes ML pour la Prédiction des Maladies Cardiaques (SCOPUS)</div>
+                <div class="publication">- Techniques ML Non Supervisé pour Systèmes de Contrôle (SCOPUS)</div>
+                <div class="publication">- Robotique Mobile : Applications de l'IA et du ML (SCOPUS)</div>
+                <div class="publication">- Analyse de l'Onde de Pouls par Cartes de Kohonen (SCOPUS)</div>
+                <div class="publication">- Optimisation de Politiques pour Systèmes Autonomes (VAK)</div>
+                <div class="publication">- Analyse de l'Onde de Pouls par Cartes Auto-Organisatrices (VAK)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Langues</h2>
+        <div class="languages-grid">
+            <div class="lang-item">
+                <div class="lang-name">Arabe</div>
+                <div class="lang-level">Langue maternelle</div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name">Français</div>
+                <div class="lang-level">Courant</div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name">Anglais</div>
+                <div class="lang-level">Professionnel</div>
+            </div>
+            <div class="lang-item">
+                <div class="lang-name">Russe</div>
+                <div class="lang-level">Professionnel</div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>
