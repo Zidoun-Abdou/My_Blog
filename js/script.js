@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typedTextElement = document.getElementById('typed-text');
     if (typedTextElement) {
         const texts = [
-            'Consultant IA & Logiciel',
+            'Consultant en Développement Logiciel',
             'Ingénieur IA',
             'Doctorat en Intelligence Artificielle',
             'Développeur d\'Applications Mobiles',
